@@ -41,11 +41,15 @@ fun MessageCard(msg: Message) {
                 .clip(CircleShape)
                 .border(1.5.dp, MaterialTheme.colors.secondary, CircleShape)
         )
-        Spacer(modifier = Modifier.height(4.dp))
+        Spacer(modifier = Modifier.width(4.dp))
         Column {
-            Text(text = msg.author, color = MaterialTheme.colors.secondaryVariant)
+            Text(
+                text = msg.author,
+                color = MaterialTheme.colors.secondaryVariant,
+                style = MaterialTheme.typography.subtitle2
+            )
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = msg.body)
+            Text(text = msg.body, style = MaterialTheme.typography.body2)
         }
     }
 }
